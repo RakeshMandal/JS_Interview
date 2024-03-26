@@ -181,7 +181,7 @@ const promise1 = new Promise((resolve, reject) => {
 1
 promise1: Promise { 'resolve1' }
 promise2: Promise { <pending> }
-resolve1 (It is coming because we resolving promise1)
+resolve1 (It is coming because we're resolving promise1)
 */
 /*
 const promise1 = new Promise((resolve, reject) => {
@@ -248,7 +248,7 @@ undefined
 number
 */
 
-// 10. 
+// 10. Egle eye
 /*
 const length = 4;
 const numbers = [];
@@ -276,7 +276,7 @@ function outer() {
   inner();
 }
 outer();
-console.log(undefined+10)
+console.log(undefined + 10) // NAN
 */
 /*
 NaN
@@ -416,7 +416,8 @@ log(); // What is logged?
 Count is 0
 
 The log function captures the message variable, which is initially set to "Count is 0" when createIncrement is called.
-However, it's important to note that the message variable is not updated dynamically. It captures the value of count at the time the log function is created, not at the time it is called.
+However, it's important to note that the message variable is not updated dynamically.
+ It captures the value of count at the time the log function is created, not at the time it is called.
 */
 
 // 20.
