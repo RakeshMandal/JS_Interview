@@ -75,4 +75,22 @@ function groupByCategory(input) {
 
 console.log(groupByCategory(input1));
 
+// 4.
+
+function fun(...args) {
+    if (args.length >= 3) {
+        return args.reduce((sum, num) => sum + num, 0);
+    } else {
+        return function next(...nextArgs) {
+            return fun(...args.concat(nextArgs));
+        };
+    }
+}
+
+// Test cases
+console.log(fun(2, 3, 4)); // Output: 9
+console.log(fun(2)(3)(4)); // Output: 9
+console.log(fun(2, 3)(4)); // Output: 9
+console.log(fun(3)(4, 5)); // Output: 12
+
 
